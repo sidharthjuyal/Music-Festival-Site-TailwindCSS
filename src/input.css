@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+@import "tailwindcss";
+@source "./";
+
+@theme {
+    --font-sans-serif: sans-serif, serif;
+    --font-quicksand: "Quicksand", serif;
+    --animate-wavey: wavey 1000ms linear infinite;
+
+    @keyframes wavey {
+        0%,
+        100% {
+            transform: scaleY(0.5);
+        }
+
+        50% {
+            transform: scaleY(1.5);
+        }
+    }
+}
+
+@utility animation-delay-* {
+    animation-delay: calc(--value(integer) * 1ms);
+}
+
+@layer base {
+    body {
+        font-family: var(--font-quicksand);
+    }
+    h1 {
+        @apply text-6xl font-bold;
+    }
+    h2 {
+        @apply text-5xl font-bold;
+    }
+    h3 {
+        @apply text-4xl font-bold;
+    }
+    h4 {
+        @apply text-3xl font-bold;
+    }
+    h5 {
+        @apply text-2xl font-bold;
+    }
+    h6 {
+        @apply text-xl font-bold;
+    }
+}
+
+@layer components {
+    .menu-item {
+        @apply relative flex h-full items-center p-4 cursor-pointer font-bold text-pink-200 hover:text-zinc-200 hover:bg-white/10 transition-colors ease-in-out;
+    }
+}
+
+@custom-variant group-open {
+    &:is(:where(.group):is(.open, [open], :popover-open, :open) *) {
+        @slot;
+    }
+}
+
+@custom-variant peer-open {
+    &:is(:where(.peer):is(.open, [open], :popover-open, :open) ~ *) {
+        @slot;
+    }
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+.overflowing-div {
+    -ms-overflow-style: none;  
+    scrollbar-width: none; 
+}
+.overflowing-div::-webkit-scrollbar { 
+    display: none; 
+}
