@@ -1,45 +1,34 @@
-# Music-Festival-Site-TailwindCSS
-This is a Music Festival Site made using TailwindCSS. ( Practice for Responsiveness )
+# 🎸 Music Festival Landing Page (Practice Project)
+A fully responsive landing page built to practice **Tailwind CSS** fundamentals and component-based styling.
 
-# Layers
-- Base layer
-  - body, h2, button (Applies style to an html tag, general base styles)
-- Components layer
-  - .btn, .third-partt-lib (Recommended not to create components, they are not out of the box)
-- Utilities layer
-  - .text-2xl, .bg-white (They are out of the box tailwind classes)
+## 🔗 Live Demo
+[View Site](https://musicfestivalsite.netlify.app/)
 
-Note: Utilities override components and components override base layer.
+## 🎯 Purpose
+This project was created as a hands-on practice to:
+- Strengthen Tailwind CSS skills
+- Build responsive layouts
+- Work with utility-first CSS design patterns
+- Experiment with animation and layout structure
 
-# layer vs. theme
-```html
-@theme {
-    --font-sans-serif: sans-serif, serif;
-    --font-quicksand: "Quicksand", serif;
-}
+## 🧰 Tech Stack
+- HTML5  
+- Tailwind CSS  
+- JavaScript (minimal)  
+- Netlify (Deployment)
 
-@layer base {
-    body {
-        font-family: var(--font-quicksand);
-    }
-}
-```
+## 🧪 Features
+- Hero section with CTA
+- Responsive navigation bar
+- Artist lineup
+- Event schedule sections
+- Footer with social icons
 
-# creating a component
-```html
-@layer components {
-    .menu-item {
-        @apply relative flex h-full items-center p-4 cursor-pointer font-bold text-pink-200 hover:text-zinc-200 hover:bg-white/10 transition-colors ease-in-out;
-    }
-}
-using components like this increases bundle size, recommended to us eutilities classes and component should be used in a limited way.
-```
+## 📌 Status
+✅ Completed
+🧪 Purely for Tailwind CSS practice – not production ready
 
-# creating a custom variant
-```html
-@custom-variant group-open {
-    &:is(:where(.group):is(.open, [open], :popover-open, :open) *) {
-       @slot;
-    }
-}
-```
+## 🧑‍💻 Author
+**Sidharth Juyal**
+📫 [sid.juyal.34@gmail.com](mailto:sid.juyal.34@gmail.com)
+🌐 [GitHub](https://github.com/sidharthjuyal)
