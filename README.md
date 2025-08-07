@@ -26,7 +26,7 @@ This project was created as a hands-on practice to:
 
 ## 📌 Status
 ✅ Completed
-🧪 Purely for Tailwind CSS practice – not production ready
+🧪 Purely for Tailwind CSS practice
 
 ## 🧑‍💻 Author
 **Sidharth Juyal**
